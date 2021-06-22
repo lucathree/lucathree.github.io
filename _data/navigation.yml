@@ -1,0 +1,21 @@
+# main links
+main:
+   - title: "개발일기"
+     url: /diary/
+   - title: "공부기록"
+     url: /study/
+   - title: "Category"
+     url: /categories/
+   - title: "Archive"
+     url: /posts/
+  
+  #- title: "Quick-Start Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
