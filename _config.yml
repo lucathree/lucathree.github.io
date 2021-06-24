@@ -292,3 +292,10 @@ defaults:
       author_profile: true
       sidebar:
         nav: "side"
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      sidebar:
+        nav: "side"
