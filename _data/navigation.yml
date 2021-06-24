@@ -1,9 +1,5 @@
 # main links
 main:
-   - title: "개발일기"
-     url: /diary/
-   - title: "공부기록"
-     url: /study/
    - title: "Category"
      url: /categories/
    - title: "Tags"
