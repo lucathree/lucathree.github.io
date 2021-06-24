@@ -1,7 +1,7 @@
 ---
 title: "Algorithm"
 layout: category
-permalink: /study/algorithm
+permalink: /study/algorithm/
 author_profile: true
 taxonomy: Algorithm
 ---
