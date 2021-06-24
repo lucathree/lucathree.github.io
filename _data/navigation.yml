@@ -6,9 +6,34 @@ main:
      url: /study/
    - title: "Category"
      url: /categories/
-   - title: "Archive"
-     url: /posts/
-  
+   - title: "Tags"
+     url: /tags/
+     
+side:
+   - title: Diary
+     children:
+       - title: "개발일기"
+         url: /diary/becoming-a-programmer/
+   
+   - title: Study Note
+     children:
+       - title: "Python"
+         url: /study/python/
+       - title: "MySQL"
+         url: /study/mysql/
+       - title: "Git & Github"
+         url: /study/git/
+       - title: "Computer Science"
+         url: /study/cs/
+       - title: "Algorithm"
+         url: /study/algorithm/
+        
+   - title: Etc.
+     children:
+       - title: "Playdata AI 교육과정"
+         url: /tags/playdata
+
+
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
