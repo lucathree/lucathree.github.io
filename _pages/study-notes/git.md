@@ -1,7 +1,7 @@
 ---
 title: "Git & Github"
 layout: category
-permalink: /study/git
+permalink: /study/git/
 author_profile: true
 taxonomy: Git
 ---
