@@ -5,10 +5,10 @@ author_profile: true
 read_time: true
 related: true
 categories:
-- Diary
-tags:
 - 개발일기
-- Blog
+tags:
+- diary
+- blog
 
 toc: true
 toc_sticky: true
