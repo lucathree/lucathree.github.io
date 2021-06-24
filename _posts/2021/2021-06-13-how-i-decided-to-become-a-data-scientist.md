@@ -5,9 +5,9 @@ author_profile: true
 read_time: true
 related: true
 categories:
-- Diary
-tags:
 - 개발일기
+tags:
+- diary
 - 데이터 사이언티스트
 - 비전공자
 toc: true
