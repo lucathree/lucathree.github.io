@@ -1,7 +1,7 @@
 ---
 title: "MySQL"
 layout: category
-permalink: /study/mysql
+permalink: /study/mysql/
 author_profile: true
 taxonomy: mysql
 ---
