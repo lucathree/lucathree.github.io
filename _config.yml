@@ -294,8 +294,8 @@ defaults:
         nav: "side"
   # _home
   - scope:
-      path: ""
-      type: home
+      path: "/"
+      type: archive
     values:
       sidebar:
         nav: "side"
