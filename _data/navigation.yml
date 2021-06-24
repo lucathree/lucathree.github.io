@@ -31,7 +31,7 @@ side:
    - title: Etc.
      children:
        - title: "Playdata AI 교육과정"
-         url: /tags/playdata
+         url: /tags/playdata/
 
 
   #- title: "Quick-Start Guide"
