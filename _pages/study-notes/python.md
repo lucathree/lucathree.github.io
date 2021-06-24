@@ -1,7 +1,7 @@
 ---
 title: "Python"
 layout: category
-permalink: /study/python
+permalink: /study/python/
 author_profile: true
 taxonomy: Python
 ---
