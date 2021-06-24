@@ -5,13 +5,12 @@ author_profile: true
 read_time: true
 related: true
 categories:
-- Diary
-tags:
 - 개발일기
+tags:
+- diary
 - 데이터 사이언티스트
 - 비전공자
-- 플레이데이터
-- 인공지능SW개발 10기
+- 플레이데이터 AI교육과정
 toc: true
 toc_sticky: true
 ---
