@@ -3,6 +3,8 @@ title: "개발일기"
 layout: tag
 permalink: /diary/
 author_profile: true
+sidebar:
+  nav: "main"
 taxonomy: 개발일기
 ---
 
