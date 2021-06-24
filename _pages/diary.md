@@ -1,10 +1,8 @@
 ---
 title: "개발일기"
-layout: tag
-permalink: /diary/
+layout: category
+permalink: /diary/becoming-a-programmer/
 author_profile: true
-sidebar:
-  nav: "main"
 taxonomy: 개발일기
 ---
 
