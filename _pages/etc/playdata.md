@@ -1,5 +1,5 @@
 ---
-title: "Playdata 인공지능SW개발자 10기"
+title: "Playdata AI교육과정"
 layout: tag
 permalink: /tags/playdata/
 author_profile: true
