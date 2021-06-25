@@ -3,7 +3,7 @@ title: "MySQL"
 layout: category
 permalink: /study/mysql/
 author_profile: true
-taxonomy: mysql
+taxonomy: MySQL
 ---
 
 배우고 공부한 내용들을 기록합니다.  
