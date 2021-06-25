@@ -7,10 +7,11 @@ related: true
 categories:
 - 개발일기
 tags:
-- diary
-- 데이터 사이언티스트
+- Diary
+- Data Science
 - 비전공자
-- 플레이데이터 AI교육과정
+- 플레이데이터
+- 인공지능SW개발자과정
 toc: true
 toc_sticky: true
 ---
