@@ -10,8 +10,6 @@ tags:
 - Diary
 - 플레이데이터
 - 인공지능SW개발자과정
-toc: true
-toc_sticky: true
 ---
 
 
