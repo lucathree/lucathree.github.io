@@ -1,5 +1,5 @@
 ---
-title: 내 미래를 맡겨도 될까? 플레이데이터 데이터사이언스 교육참여 프리뷰
+title: "내 미래를 맡겨도 될까? 플레이데이터 데이터사이언스 교육과정 신청후기"
 layout: single
 author_profile: true
 read_time: true
