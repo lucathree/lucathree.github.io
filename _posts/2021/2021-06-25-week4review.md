@@ -16,7 +16,6 @@ tags:
 플레이데이터 교육과정에 대한 자세한 소개 및 선택 계기에 대한 글을 원하실 경우  
 아래 포스팅을 참고해주세요  
 #### [내 미래를 맡겨도 될까? 플레이데이터 데이터사이언스 교육참여 프리뷰](https://lucathree.github.io/%EA%B0%9C%EB%B0%9C%EC%9D%BC%EA%B8%B0/bootcamp-preview/)
-
 &nbsp;
 -------------
 
