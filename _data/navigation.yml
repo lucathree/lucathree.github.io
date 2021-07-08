@@ -23,6 +23,8 @@ side:
          url: /study/cs/
        - title: "- CS50"
          url: /study/cs/cs50
+       - title: "- 네트워크"
+         url: /study/cs/network
        - title: "Algorithm"
          url: /study/algorithm/
         
