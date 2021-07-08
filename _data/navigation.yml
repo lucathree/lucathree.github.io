@@ -21,6 +21,9 @@ side:
          url: /study/git/
        - title: "Computer Science"
          url: /study/cs/
+         children:
+           - title: "CS50"
+             url: /study/cs/cs50
        - title: "Algorithm"
          url: /study/algorithm/
         
