@@ -305,7 +305,7 @@ print("my queue is:", q)  # my queue is: [5, 10]
 
 **링 버퍼**는 배열 맨 끝의 원소 뒤에 맨 앞의 원소가 연결되는 원형의 자료구조로 디큐할 때 배열 안의 원소를 옮기지 않아도 되기 때문에 인큐와 디큐 모두 O(1)이 되어 훨씬 효율적이다. 이 때 링 버퍼에서의 프런트와 리어는 논리적인 데이터 순서일 뿐 배열의 물리적 순서는 아니다.
 
-![3](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-09/(3).PNG)
+![3](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-09/(3).png)
 
 링 버퍼를 구현하기 위해서는 배열의 크기가 고정되어야 하기 때문에 앞서 구현한 FixedStack과 비슷한 방식으로 FixedQueue를 구현해주면 된다.
 
