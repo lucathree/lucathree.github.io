@@ -30,11 +30,10 @@ toc_sticky: true
 
 대표적인 내장함수: **push(), peak(), pop()**
 
-&nbsp;
 
 ## 스택의 구조
 
-![1](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77e7b609-5984-4164-afd3-3f15a61a6f70/stack.png)
+![1](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-09/(1).PNG)
 
 - 책을 쌓듯이 데이터를 넣고 꺼내는 작업을 맨 위부터 수행한다.
 - 작업이 수행되는 윗부분을 **꼭대기(top)**이라 하고, 아랫부분을 **바닥(bottom)**이라고 한다.
@@ -42,14 +41,12 @@ toc_sticky: true
 - **Pop:** top의 데이터를 꺼내는 작업
 - **Peek:** top의 데이터를 확인하는 작업
 
-  &nbsp;
 
 ## 스택의 활용 예
 
 - 웹브라우저의 '이전 페이지', '다음 페이지' 기능
 - 깊이 우선 탐색(DFS)
 
-  &nbsp;
 
 ## 스택의 구현방법
 
@@ -100,7 +97,6 @@ print("my stack is:",s)  # my stack is: [1, 5]
 
 - 클래스를 직접 구현한 것과 함수 사용 방법만 다르고 결과는 같다
 
-&nbsp;
 
 ## 심화 구현
 
@@ -114,18 +110,12 @@ print("my stack is:",s)  # my stack is: [1, 5]
 
 - 예외처리 클래스 **Full**: 가득 찬 스택에 push를 호출할 때 내보내는 예외 처리. Exception 클래스를 상속한 하위 클래스
 
-- **init**(capacity):
-
-  FixedStack 객체 생성시의 초기값을 정의하는 함수
-
+- **init**(capacity): FixedStack 객체 생성시의 초기값을 정의하는 함수
   - stk: 스택의 본체인 리스트형 배열. 파라미터 capacity를 통해 받은 값으로 원소 수가 capacity이고 모든 원소가 None인 리스트 생성
   - capacity: 스택의 최대 크기를 나타내는 정수. len(stk)와 값이 일치
   - **ptr:** 스택에 쌓여있는 데이터의 개수를 나타내는 정숫값인 **스택 포인터**
 
-- **len**():
-
-  쌓여있는 데이터의 개수를 반환하는 함수. 여기서는 ptr값을 그대로 반환하도록 한다.
-
+- **len**(): 쌓여있는 데이터의 개수를 반환하는 함수. 여기서는 ptr값을 그대로 반환하도록 한다.
   - 더블언더스코어 __(혹은 던더)를 붙인 함수는 파이썬에 내장된 특수 함수 및 변수를 나타낸다.
   - 클래스에 **len** 함수를 정의하면 클래스형의 인스턴스를 **len** 함수에 전달하도록 한다. 예를 들어 s = FixedStack() 을 통해 FixedStack 클래스 형의 인스턴스 s를 만들었다면, s.**len**() 를 간단히 len(s)라고 표현할 수 있게 된다.
 
@@ -133,7 +123,8 @@ print("my stack is:",s)  # my stack is: [1, 5]
 
 - **is_full():** 스택이 가득 차 있는지 판단
 
-- **push(), pop(), peek():** 기존 역할과 동일. 다만 여기서는 예외처리가 추가되고 반드시 스택 포인터를 사용해서 값을 추가, 반환하도록 한다. (**raise문**은 사용자가 에러를 직접 발생시키도록 해준다)
+- **push(), pop(), peek():**   
+   기존 역할과 동일. 다만 여기서는 예외처리가 추가되고 반드시 스택 포인터를 사용해서 값을 추가, 반환하도록 한다. (**raise문**은 사용자가 에러를 직접 발생시키도록 해준다)
 
 - **clear():** 스택에 쌓여 있는 데이터를 모두 삭제하여 빈 스택을 만든다. 여기서는 스택 포인터를 0으로 초기화시켜서 기능을 구현했는데, 엄밀히 따지면 stk 리스트에 값은 그대로 있지만 포인터가 0이기 때문에 push, pop, peek 또는 is_empty나 is_full 함수를 사용해도 값의 존재를 확인할 수 없다.
 
@@ -141,10 +132,7 @@ print("my stack is:",s)  # my stack is: [1, 5]
 
 - **count():** 스택에 쌓여있는 특정 데이터의 개수를 세는 함수
 
-- **contains**():
-
-  스택에 데이터가 있는지 판단하여 있으면 True를 반환하고 없으면 False를 반환.
-
+- **contains**(): 스택에 데이터가 있는지 판단하여 있으면 True를 반환하고 없으면 False를 반환.
   - **len**() 처럼 **contains**() 함수를 정의하면 클래스형의 인스턴스에 **멤버십 판단 연산자**인 in을 사용할 수 있다. 예를 들어 스택 s에 x라는 값이 있는지 확인하고 싶다면 s.__contains(x) 대신 x in s 라고 표현할 수 있다.
 
 - **dump():** 스택에 쌓여있는 ptr개의 모든 데이터를 바닥부터 꼭대기까지 출력                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ****
@@ -227,11 +215,10 @@ class FixedStack:
 
 대표적인 내장함수: **put(), peek(), get()**
 
-&nbsp;
 
 ## 큐의 구조
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3a7046b-fd11-41a8-aafd-09455a1378a0/queue.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f3a7046b-fd11-41a8-aafd-09455a1378a0/queue.png)
+![2](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-09/(2).PNG)
 
 - 가장 먼저온 데이터를 가장 먼저 꺼내는, 차례를 기다리는 선착순 구조.
 - 데이터를 꺼내는 쪽을 **프런트(front)**라 하고, 데이터를 넣는 쪽을 **리어(rear)**라고 한다.
@@ -239,14 +226,12 @@ class FixedStack:
 - **Get (또는 Dequeue):** 큐의 프런트에서 데이터를 꺼내는 작업
 - **Peek:** 큐의 프런트에 있는 데이터를 확인하는 작업
 
-&nbsp;
 
 ## 큐의 활용 예
 
 - 프린터 인쇄 대기열
 - 너비 우선 탐색(BFS)
 
-&nbsp;
 
 ## 큐의 구현방법
 
@@ -311,7 +296,6 @@ print("peeked value is:", q[0])  #peeked value is: 5
 print("my queue is:", q)  # my queue is: [5, 10]
 ```
 
-&nbsp;
 
 ## 심화 구현
 
@@ -321,20 +305,16 @@ print("my queue is:", q)  # my queue is: [5, 10]
 
 **링 버퍼**는 배열 맨 끝의 원소 뒤에 맨 앞의 원소가 연결되는 원형의 자료구조로 디큐할 때 배열 안의 원소를 옮기지 않아도 되기 때문에 인큐와 디큐 모두 O(1)이 되어 훨씬 효율적이다. 이 때 링 버퍼에서의 프런트와 리어는 논리적인 데이터 순서일 뿐 배열의 물리적 순서는 아니다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/febe1430-a3ef-4046-862b-abdcaf35315d/dequeue.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/febe1430-a3ef-4046-862b-abdcaf35315d/dequeue.png)
+![3](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-09/(3).PNG)
 
 링 버퍼를 구현하기 위해서는 배열의 크기가 고정되어야 하기 때문에 앞서 구현한 FixedStack과 비슷한 방식으로 FixedQueue를 구현해주면 된다.
 
-&nbsp;
 
 #### 구성요소
 
-- 예외처리 클래스 **Empty, Full:** 인큐(put), ****디큐(get), peek 함수를 호출할 때 내보내는 예외 처리 클래스
+- 예외처리 클래스 **Empty, Full:** 인큐(put), 디큐(get), peek 함수를 호출할 때 내보내는 예외 처리 클래스
 
-- **init**(capacity):
-
-  FixedQueue 객체 생성시 큐 배열 생성 및 변수들의 초기값을 정의하는 함수
-
+- **init**(capacity): FixedQueue 객체 생성시 큐 배열 생성 및 변수들의 초기값을 정의하는 함수
   - que: 큐의 본체인 리스트형 배열. 파라미터 capacity를 통해 받은 값으로 원소 수가 capacity이고 모든 원소가 None인 리스트 생성
   - capacity: 큐의 최대 크기를 나타내는 정수. len(que)와 값이 일치
   - **front, rear:** 맨 앞의 원소, 맨 끝의 원소를 나타내는 인덱스.
