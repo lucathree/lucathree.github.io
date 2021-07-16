@@ -37,7 +37,7 @@ SW개발교육을 시작하고 어느덧 6주가 흘렀다. 지난 미니 프로
 
 학습 내용중에는 이론적인 부분들도 많았고, 각 내용들의 실습을 해보기는 했지만 응용하여 프로그래밍을 해보지는 않았기 때문에 **전부 다!** 이번 프로젝트를 통해 복습을 해보고 추가로 그 전에 배운 클래스를 활용한 객체 지향 프로그래밍과 MySQL을 통한 DB 연동까지 해보기로 마음먹었다.
 
-![1](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-13/(1).JPG)
+![1](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-13/(1).jpg)
 
 어째서 이렇게 의욕이 넘쳤었는지는 모르겠지만 아무튼 프로젝트를 시작하기 전에는 머릿속으로 어떻게 각 기능들을 활용할 것인지 계획들이 착착 세워졌었고 주말 동안 손쉽게 프로젝트를 마무리 할 수 있을 것이라고 생각했다. 그러나...
 
@@ -178,7 +178,7 @@ class StationDao:
 
 게다가 처음 작업을 시작했을 때는 데이터프레임을 만드는 것보다는 API를 통해 가져온 리스트를 바로 활용하는 편이 더 효율적일 것이라는 생각이 들어 리스트 중심으로 작업을 진행했는데, 이 부분 또한 객체 중심으로 바꾸는 과정에서 데이터프레임을 쓰는 게 훨씬 효율적임을 깨닫고 결국 모든 코드를 갈아 엎을 수 밖에 없었다...
 
-![2](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-13/(2).JPG)
+![2](https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-13/(2).jpg){: width="400px"}
 
 그러나 삽질은 여기에서 끝나지 않았는데...
 
