@@ -27,6 +27,10 @@ side:
          url: /study/cs/network
        - title: "Algorithm"
          url: /study/algorithm/
+       - title: "- 개념정리"
+         url: /study/algorithm/
+       - title: "- 연습문제풀이"
+         url: /study/algorithm/practice
         
    - title: Etc.
      children:
