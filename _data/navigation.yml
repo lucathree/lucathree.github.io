@@ -28,7 +28,7 @@ side:
        - title: "Algorithm"
          url: /study/algorithm/
        - title: "- 개념정리"
-         url: /study/algorithm/
+         url: /study/algorithm/theory
        - title: "- 연습문제풀이"
          url: /study/algorithm/practice
         
