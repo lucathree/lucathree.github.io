@@ -134,7 +134,7 @@ MVC에서 View에 해당하는 부분으로 실제로 보일 페이지에 대한
   - 이용내역 및 사용자 통계 표시 페이지 (list.html)
 - 그 외
   - index.html : 웹서비스의 메인 페이지
-  - base.html: 웹서비스의 모든 페이지에 공통적으로 들어가는 부분 (예, 네비게이션 바). 플라스크를 통해 각 템플릿에 **{% extends "base.html" %}** 를 적용하여 매번 같은 내용을 반복해서 입력하지 않도록 만들었다.
+  - base.html: 웹서비스의 모든 페이지에 공통적으로 들어가는 부분 (예, 네비게이션 바). 플라스크를 통해 각 템플릿에 "**{% extends "base.html" %}**" 를 적용하여 매번 같은 내용을 반복해서 입력하지 않도록 만들었다.
 
 ### Static
 
@@ -252,7 +252,7 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
 
 다음, 위 템플릿 내용을 상속받을 템플릿들은 아래 형태로 작성을 해주면 된다.
 
-아래에서 {% block content %} {% endblock %} 사이의 코드가 위 base.html의 {% block content %}와  {% endblock %} 사이에 들어간다고 보면 된다.
+아래에서 "{% block content %} {% endblock %}" 사이의 코드가 위 base.html의 "{% block content %}와  {% endblock %}" 사이에 들어간다고 보면 된다.
 
 ```html
 {% extends "base.html" %}
