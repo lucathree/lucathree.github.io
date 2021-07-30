@@ -188,7 +188,7 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
 
 위에서 조금 설명하긴 했지만, 웹사이트 전체에 공통으로 네비게이션 바를 적용하기 위해 플라스크의 템플릿 상속 기능을 사용했다.
 
-먼저 공통적으로 적용시킬 템플릿을 만든 뒤 다음과 같이 중간에 block content 을 넣어주면 된다.
+먼저 공통적으로 적용시킬 템플릿을 만든 뒤 다음과 같이 중간에 {% raw %}**{% block content %}**, **{% endblock %}**{ % endraw % } 을 넣어주면 된다.
 
 ```html
 <!DOCTYPE html>
@@ -224,7 +224,7 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
             </li>
           </ul>
           <ul class="navbar-nav d-flex">
-            {% if 'id' in session %}
+            {% raw %}{% if 'id' in session %}{% endraw %}
             <li class="nav-item">
               <a class="nav-link" href="/member/logout">로그아웃</a>
             </li>
@@ -238,13 +238,13 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
             <li class="nav-item">
               <a class="nav-link" href="/member/join">회원가입</a>
             </li>
-            {% endif %}
+            {% raw %}{% endif %}{% endraw %}
           </ul>
         </div>
       </div>
     </nav>
-    {% block content %}
-    {% endblock %}
+    {% raw %}{% block content %}
+    {% raw %}{% endblock %}{% end %}
   <script src="<https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js>" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
@@ -252,16 +252,16 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
 
 다음, 위 템플릿 내용을 상속받을 템플릿들은 아래 형태로 작성을 해주면 된다.
 
-아래에서 block content와 endblock 사이의 코드가 위 base.html의 block content와 endblock 사이에 들어간다고 보면 된다.
+아래에서 {% raw %}{% block content %} {% endblock %}{% endraw %} 사이의 코드가 위 base.html의 {% raw %}{% block content %}와  {% endblock %}{ % endraw % } 사이에 들어간다고 보면 된다.
 
 ```html
-{% extends "base.html" %}
+{% raw %}{% extends "base.html" %}{% endraw %}
 
-{% block content %}
+{% raw %}{% block content %}{% endraw %}
     <div class="container">
 				<h1> 안녕하세요~ </h1>
 		</div>
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 ```
 
 ### 게시판 댓글작성
@@ -290,8 +290,8 @@ DB에서 board 테이블과 reply 테이블을 만든 뒤 reply 테이블에는 
                 </td></tr>
             </table>
         </td></tr>
-        {% endif %}
-        {% for i in r %}
+        {% raw %}{% endif %}{% endraw %}
+        {% raw %}{% for i in r %}{% endraw %}
         <tr class="table-secondary"><th>작성자: {{i.reply_writer}}  작성일: {{i.w_date}}</th></tr>
         <tr><td style="white-space:pre-wrap">{{i.content}} {% if session['id'] == i.reply_writer %}<a href="javascript:delreply('{{b.num}}','{{i.num}}');" style="color:red">삭제</a>{% endif %}</td></tr>
         {% endfor %}
@@ -336,9 +336,9 @@ def add_form():
     <label for="rent_station" class="form-label fw-bold">대여한 보관소</label>
     <select class="form-select" id="rent_station" name="rent_station">
         <option selected>보관소명</option>
-        {% for s in stlst %}
+        {% raw %}{% for s in stlst %}{% endraw %}
         <option value="{{s}}">{{s}}</option>
-        {% endfor %}
+        {% raw %}{% endfor %}{% endraw %}
     </select>
 </div>
 ```
