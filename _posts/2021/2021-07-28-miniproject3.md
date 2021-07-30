@@ -238,13 +238,13 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
             <li class="nav-item">
               <a class="nav-link" href="/member/join">회원가입</a>
             </li>
-            {% raw %}{% endif %}{% endraw %}
+            {% raw %}{% endif %}
           </ul>
         </div>
       </div>
     </nav>
-    {% raw %}{% block content %}
-    {% raw %}{% endblock %}{% end %}
+    {% block content %}
+    {% endblock %}{% endraw %}
   <script src="<https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js>" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
@@ -269,6 +269,7 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
 DB에서 board 테이블과 reply 테이블을 만든 뒤 reply 테이블에는 게시물 번호를 참조하는 board_num 컬럼을 추가해줬다. 각 게시물마다 해당 게시물 번호를 참조하는 댓글을 불러와서 표시하도록 했는데, 플라스크의 Jinja2 템플릿 엔진 코드를 사용해서 댓글을 반복해서 출력하도록 하고, 자바스크립트를 사용해서 삭제 기능을 다음과 같이 구현했다.
 
 ```html
+{% raw %}
 <script>
     function delreply(board_num, reply_num){
         location.href="/board/delreply?num="+board_num+"&reply_num="+reply_num;
@@ -290,13 +291,14 @@ DB에서 board 테이블과 reply 테이블을 만든 뒤 reply 테이블에는 
                 </td></tr>
             </table>
         </td></tr>
-        {% raw %}{% endif %}{% endraw %}
-        {% raw %}{% for i in r %}{% endraw %}
+        {% endif %}
+        {% for i in r %}
         <tr class="table-secondary"><th>작성자: {{i.reply_writer}}  작성일: {{i.w_date}}</th></tr>
         <tr><td style="white-space:pre-wrap">{{i.content}} {% if session['id'] == i.reply_writer %}<a href="javascript:delreply('{{b.num}}','{{i.num}}');" style="color:red">삭제</a>{% endif %}</td></tr>
         {% endfor %}
     </table>
 </form>
+{% endraw %}
 ```
 
 ### 이용자 통계
@@ -332,15 +334,17 @@ def add_form():
 - add.html
 
 ```html
+{% raw %}
 <div class="col">
     <label for="rent_station" class="form-label fw-bold">대여한 보관소</label>
     <select class="form-select" id="rent_station" name="rent_station">
         <option selected>보관소명</option>
-        {% raw %}{% for s in stlst %}{% endraw %}
+        {% for s in stlst %}
         <option value="{{s}}">{{s}}</option>
-        {% raw %}{% endfor %}{% endraw %}
+        {% endfor %}
     </select>
 </div>
+{% endraw %}
 ```
 
 사용한 보관소 기록이 DB에 저장되면 해당 유저 id로 사용한 보관소 내역을 모두 가져와 리스트로 만든 뒤 리스트 안에서 가장 많은 요소가 무엇인지를 반환하도록 했다.
