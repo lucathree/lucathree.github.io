@@ -134,7 +134,7 @@ MVC에서 View에 해당하는 부분으로 실제로 보일 페이지에 대한
   - 이용내역 및 사용자 통계 표시 페이지 (list.html)
 - 그 외
   - index.html : 웹서비스의 메인 페이지
-  - base.html: 웹서비스의 모든 페이지에 공통적으로 들어가는 부분 (예, 네비게이션 바). 플라스크를 통해 각 템플릿에 **{% extends "base.html" %}** 를 적용하여 매번 같은 내용을 반복해서 입력하지 않도록 만들었다.
+  - base.html: 웹서비스의 모든 페이지에 공통적으로 들어가는 부분 (예, 네비게이션 바). 플라스크를 통해 템플릿 상속을 적용하여 매번 같은 내용을 반복해서 입력하지 않도록 만들었다.
 
 ### Static
 
@@ -188,7 +188,7 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
 
 위에서 조금 설명하긴 했지만, 웹사이트 전체에 공통으로 네비게이션 바를 적용하기 위해 플라스크의 템플릿 상속 기능을 사용했다.
 
-먼저 공통적으로 적용시킬 템플릿을 만든 뒤 다음과 같이 중간에 **{% block content %}**, **{% endblock %}** 을 넣어주면 된다.
+먼저 공통적으로 적용시킬 템플릿을 만든 뒤 다음과 같이 중간에 block content, endblock 을 넣어주면 된다.
 
 ```html
 <!DOCTYPE html>
@@ -224,27 +224,29 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
             </li>
           </ul>
           <ul class="navbar-nav d-flex">
-            {% if 'id' in session %}
+            {% raw %}{% if 'id' in session %}{% endraw %}
             <li class="nav-item">
               <a class="nav-link" href="/member/logout">로그아웃</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/member/info">마이페이지</a>
             </li>
-            {% else %}
+            {% raw %}{% else %}{% endraw %}
             <li class="nav-item">
               <a class="nav-link" href="/member/login">로그인</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/member/join">회원가입</a>
             </li>
-            {% endif %}
+            {% raw %}{% endif %}{% endraw %}
           </ul>
         </div>
       </div>
     </nav>
+    {% raw %}
     {% block content %}
     {% endblock %}
+    {% endraw %}
   <script src="<https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js>" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
@@ -252,16 +254,16 @@ css, js 파일 등을 직접 다운받아서 프로젝트 폴더 안에 넣고 �
 
 다음, 위 템플릿 내용을 상속받을 템플릿들은 아래 형태로 작성을 해주면 된다.
 
-아래에서 {% block content %} {% endblock %} 사이의 코드가 위 base.html의 {% block content %}와  {% endblock %} 사이에 들어간다고 보면 된다.
+아래에서 block content와 endblock 사이의 코드가 위 base.html의 block content와  endblock 사이에 들어간다고 보면 된다.
 
 ```html
-{% extends "base.html" %}
+{% raw %}{% extends "base.html" %}{% endraw %}
 
-{% block content %}
+{% raw %}{% block content %}{% endraw %}
     <div class="container">
 				<h1> 안녕하세요~ </h1>
 		</div>
-{% endblock %}
+{% raw %}{% endblock %}{% endraw %}
 ```
 
 ### 게시판 댓글작성
@@ -278,7 +280,7 @@ DB에서 board 테이블과 reply 테이블을 만든 뒤 reply 테이블에는 
 <form action="/board/reply" method="post">
     <input type="hidden" name="board_num" value="{{b.num}}">
     <table class="table table-bordered mt-3 mb-5 pb-5 col-8">
-        {% if 'id' in session %}
+        {% raw %}{% if 'id' in session %}{% endraw %}
         <tr class="table-info"><th>댓글작성</th></tr>
         <tr><td class="my-0">
             <table class="table table-borderless my-0 py-0">
@@ -290,11 +292,14 @@ DB에서 board 테이블과 reply 테이블을 만든 뒤 reply 테이블에는 
                 </td></tr>
             </table>
         </td></tr>
+        {% raw %}
         {% endif %}
         {% for i in r %}
-        <tr class="table-secondary"><th>작성자: {{i.reply_writer}}  작성일: {{i.w_date}}</th></tr>
-        <tr><td style="white-space:pre-wrap">{{i.content}} {% if session['id'] == i.reply_writer %}<a href="javascript:delreply('{{b.num}}','{{i.num}}');" style="color:red">삭제</a>{% endif %}</td></tr>
-        {% endfor %}
+        {% endraw %}
+        <tr class="table-secondary"><th>작성자: 작성일: </th></tr>
+        <tr><td style="white-space:pre-wrap">
+            <a href="javascript:delreply('','');" style="color:red">삭제</a></td></tr>
+        {% raw %}{% endfor %}{% endraw %}
     </table>
 </form>
 ```
@@ -336,9 +341,9 @@ def add_form():
     <label for="rent_station" class="form-label fw-bold">대여한 보관소</label>
     <select class="form-select" id="rent_station" name="rent_station">
         <option selected>보관소명</option>
-        {% for s in stlst %}
-        <option value="{{s}}">{{s}}</option>
-        {% endfor %}
+        {% raw %}{% for s in stlst %}{% endraw %}
+        <option value="{% raw %}{{s}}{% endraw %}">{% raw %}{{s}}{% endraw %}</option>
+        {% raw %}{% endfor %}{% endraw %}
     </select>
 </div>
 ```
