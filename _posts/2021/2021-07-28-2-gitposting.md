@@ -42,7 +42,7 @@ toc_sticky: true
 
 endraw를 중간에 넣으려니까 문자열이 끝난줄 알고 또 에러를 뱉어낸다... 그래서 어쩔 수 없이 endraw를 "엔드raw" 라고 썼는데 어쩔 수 없이 이미지로 보여주자면 이렇게 작성해야 한다...
 
-
+<center><img src="https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2021/2021-07-28.PNG"></center>
 
 이 무슨...
 
