@@ -1,5 +1,6 @@
 ---
 title: "Github 블로그에 플라스크 템플릿변수 문자형태로 올리기"
+excerpt: "블로그에 지킬의 리퀴드태그와 충돌하는 플라스크 템플릿변수 포스팅하기"
 layout: single
 author_profile: true
 read_time: true
