@@ -5,6 +5,7 @@ main:
    - title: "Tags"
      url: /tags/
      
+
 side:
    - title: Diary
      children:
@@ -15,6 +16,8 @@ side:
      children:
        - title: "Python"
          url: /study/python/
+       - title: "Java"
+         url:/study/java/
        - title: "MySQL"
          url: /study/mysql/
        - title: "Git & Github"
@@ -31,7 +34,7 @@ side:
          url: /study/algorithm/theory
        - title: "- 연습문제풀이"
          url: /study/algorithm/practice
-        
+     
    - title: Etc.
      children:
        - title: "Playdata AI교육과정"
