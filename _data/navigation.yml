@@ -11,7 +11,8 @@ side:
      children:
        - title: "개발일기"
          url: /diary/becoming-a-programmer/
-   
+       - title: "TIL"
+         url: /diary/TIL/
    - title: Study Note
      children:
        - title: "Python"
@@ -25,15 +26,15 @@ side:
        - title: "Computer Science"
          url: /study/cs/
        - title: "- CS50"
-         url: /study/cs/cs50
+         url: /study/cs/cs50/
        - title: "- 네트워크"
-         url: /study/cs/network
+         url: /study/cs/network/
        - title: "Algorithm"
          url: /study/algorithm/
        - title: "- 개념정리"
-         url: /study/algorithm/theory
+         url: /study/algorithm/theory/
        - title: "- 연습문제풀이"
-         url: /study/algorithm/practice
+         url: /study/algorithm/practice/
      
    - title: Etc.
      children:
