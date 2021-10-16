@@ -1,7 +1,7 @@
 ---
 title: "Algorithm - 개념정리"
 layout: tag
-permalink: /study/algorithm/theory
+permalink: /study/algorithm/theory/
 author_profile: true
 taxonomy: 알고리즘이론
 ---

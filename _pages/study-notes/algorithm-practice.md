@@ -1,7 +1,7 @@
 ---
 title: "Algorithm - 연습문제풀이"
 layout: tag
-permalink: /study/algorithm/practice
+permalink: /study/algorithm/practice/
 author_profile: true
 taxonomy: 코딩테스트
 ---
