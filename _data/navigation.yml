@@ -17,6 +17,8 @@ side:
      children:
        - title: "Python"
          url: /study/python/
+       - title: "ML/DL"
+         url: /study/mldl/
        - title: "Java"
          url: /study/java/
        - title: "MySQL"
