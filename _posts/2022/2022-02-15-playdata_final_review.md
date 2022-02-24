@@ -24,7 +24,7 @@ toc_sticky: true
 
 2021년 5월 31일부터 2021년 11월 29일까지, 엔코아 플레이데이터 아카데미를 통한 6개월 간의 국비교육 과정 여정이 끝났다. 수료 전에는 6개월이 길게만 느껴졌는데 뒤돌아보니 너무나도 짧은 시간이었다. 교육이 끝나면 스스로 ‘개발자’라고 부를 수 있게 될 줄 알았는데, 아직 그냥 ‘개’인듯... 게임으로 치면 이제 겨우 튜토리얼 끝내고 첫번째 스테이지로 던져진 느낌이다.
 
-<p align="center" style=""color:#808080"><img src="https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2022/2022-02-15.jpg">그 유명한 더닝크루거 효과. 마음은 지금 절망의 계곡에 도달한 것 같은데, 실제로는 멍청이산의 정상에 도달하기나 했을까?</p>
+<p align="center" style="color:#808080"><img src="https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2022/2022-02-15.jpg">그 유명한 더닝크루거 효과. 마음은 지금 절망의 계곡에 도달한 것 같은데, 실제로는 멍청이산의 정상에 도달하기나 했을까?</p>
 
 
 교육과정을 들으면서 후기를 여러차례 작성했었는데 블로그 검색최적화가 잘 되었는지 국비교육, 부트캠프에 대한 의견을 듣고 싶어하는 사람들 덕분에 방문자 수도 꽤 나오고 종종 이메일로 고민을 보내주는 분들도 있다.
