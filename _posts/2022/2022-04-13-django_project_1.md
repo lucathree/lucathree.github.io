@@ -109,5 +109,5 @@ docker-compose up --build
 
 서버 접속을 위해 **settings.py** 에서 ALLOWED_HOSTS 에 ‘localhost’, ‘127.0.0.1’ 혹은 원격서버에서 작업 중일 경우 해당 ip 주소를 넣어주고 나면 브라우저를 통해 컨테이너 및 장고 프로젝트가 생성되어 동작하는 것을 확인할 수 있게됩니다.
 
-<p align="center" style="color:#808080"><img src="https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2022/2022-04-16.png">
+<p align="center" style="color:#808080"><img src="https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2022/2022-04-13.png">
 
