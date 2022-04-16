@@ -94,14 +94,14 @@ docker-compose up --build
 ```
 └── Works
 	├── toyproject
-	│		├── toyproject
-	│	  │   ├── __init__.py
-	│		│   ├── asgi.py
-	│	  │   ├── settings.py
-	│	  │   ├── urls.py
-	│	  │   └── wsgi.py
-	│		├── db.sqlite3
-	│	  └── manage.py
+	│   ├── toyproject
+	│   │   ├── __init__.py
+	│   │   ├── asgi.py
+	│   │   ├── settings.py
+	│   │   ├── urls.py
+	│   │   └── wsgi.py
+	│   ├── db.sqlite3
+	│   └── manage.py
 	├── requirements.txt
 	├── docker-compose.yml
 	└── dockerfile
