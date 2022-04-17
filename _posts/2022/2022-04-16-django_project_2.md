@@ -122,4 +122,4 @@ root@{컨테이너ID}:/app# ./manage.py createsuperuser
 
 ‘http://127.0.0.1:8000/admin’ 으로 접속하면 이제 로그인 화면이 표시되고, 이제 postgres db에 저장되어있을 관리자 계정을 통해 대시보드 로그인도 가능합니다.
 
-<p align="center" style="color:#808080"><img src="https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2022/2022-04-16/1.png">
+<p align="center" style="color:#808080"><img src="https://raw.githubusercontent.com/lucathree/lucathree.github.io/master/assets/images/2022/2022-04-16.png">
