@@ -10,9 +10,11 @@ side:
    - title: Diary
      children:
        - title: "개발일기"
-         url: /diary/becoming-a-programmer/
-       - title: "TIL"
-         url: /diary/TIL/
+         url: /diary/thoughts/
+       - title: "개발교양"
+         url: /diary/foundations/
+       - title: "업무회고"
+         url: /diary/work-review/
    - title: Study Note
      children:
        - title: "Python"
