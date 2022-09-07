@@ -41,6 +41,8 @@ side:
          url: /study/algorithm/theory/
        - title: "- 연습문제풀이"
          url: /study/algorithm/practice/
+       - title: "ELI5"
+         url: /study/eli5/
      
    - title: Etc.
      children:
